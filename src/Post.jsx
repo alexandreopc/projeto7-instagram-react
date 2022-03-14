@@ -3,11 +3,11 @@ import Conteudo from "./Conteudo";
 import Curtidas from "./Curtidas";
 export default function Post(props) {
     return (
-        <div class="post">
+        <div className="post">
             <Topo img={props.imgUsuario} usuario={props.usuario}/>
             <Conteudo img={props.imgConteudo}/>
-            <div class="fundo">
-                <div class="acoes">
+            <div className="fundo">
+                <div className="acoes">
                     <div>
                     <ion-icon name="heart-outline"></ion-icon>
                     <ion-icon name="chatbubble-outline"></ion-icon>

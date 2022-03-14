@@ -1,17 +1,44 @@
 import Story from "./Story";
 export default function Stories() {
+    const objetosStorie = [
+        {
+          enredeco: "assets/img/9gag.svg",
+          pagina: "9gag",
+        },
+        {
+          enredeco: "assets/img/meowed.svg",
+          pagina: "meowed",
+        },
+        {
+          enredeco: "assets/img/barked.svg",
+          pagina: "barked"
+        },
+        {
+          enredeco: "assets/img/nathanwpylestrangeplanet.svg",
+          pagina: "nathanwpylestrangeplanet",
+        },
+        {
+          enredeco: "assets/img/wawawicomics.svg",
+          pagina: "wawawicomics",
+        },
+        {
+          enredeco: "assets/img/respondeai.svg",
+          pagina: "respondeai",
+        },
+        {
+          enredeco: "assets/img/filomoderna.svg",
+          pagina: "filomoderna",
+        },
+        {
+          enredeco: "assets/img/memeriagourmet.svg",
+          pagina: "memeriagourmet",
+        }
+      ];
     return (
-        <div class="stories">
-            <Story img="assets/img/9gag.svg" usuario="9gag"/>
-            <Story img="assets/img/meowed.svg" usuario="meowed"/>
-            <Story img="assets/img/barked.svg" usuario="barked"/>
-            <Story img="assets/img/nathanwpylestrangeplanet.svg" usuario="nathanwpylestrangeplanet"/>
-            <Story img="assets/img/wawawicomics.svg" usuario="wawawicomics"/>
-            <Story img="assets/img/respondeai.svg" usuario="respondeai"/>
-            <Story img="assets/img/filomoderna.svg" usuario="filomoderna"/>
-            <Story img="assets/img/memeriagourmet.svg" usuario="memeriagourmet"/>
+        <div className="stories">
+            {objetosStorie.map((objeto) => <Story key={Math.random().toString(36).substr(2, 9)} img={objeto.enredeco} usuario={objeto.pagina}/>)}
 
-            <div class="setinha">
+            <div className="setinha">
               <ion-icon name="chevron-forward-circle"></ion-icon>
             </div>
         </div>
